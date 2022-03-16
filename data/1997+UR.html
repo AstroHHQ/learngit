@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IAU Minor Planet Center</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/mpc.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/table-sorter.css">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+  <link media="all" rel="stylesheet" href="/css/all.css">
+
+  <link rel="icon" type="image/png" href="/iau/figs/MPClogo16.png">
+  <meta name="description" content="We are the official body that deals with
+      astrometric observations and orbits of minor planets (asteroids) and comets.">
+
+  <meta name="keywords" content="astrometry, observations, orbits,
+      minor planets, asteroids, comets, near earth objects, 
+      potentially hazardous asteroids">
+
+  <script type="text/javascript" src="/js/jquery-latest.js"></script>
+<!--  <script type="text/javascript" src="/js/jquery.main.js"></script> -->
+<!--  <script type="text/javascript" src="/js/jquery.metadata.js"></script> -->
+  <script type="text/javascript" src="/js/jquery.tablesorter.js"></script>
+  <script type="text/javascript" src="/js/webtrends.js"></script>
+  <script type="text/javascript" src="/js/track_pdfs.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+  
+<body>
+  <!-- wrapper -->
+  <div id="wrapper">
+    <div class="w1">
+      <!-- header -->
+      <header id="header">
+        <div class="holder">
+          <!-- logo -->
+          <h1 class="logo"><a href="/">The International Astronomical Union Minor Planet Center</a></h1>
+          <div class="area">
+            <!-- top-nav -->
+            <nav class="top-nav">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+		<!-- Contact link changed to Jira -->
+                <li><a href="https://mpc-service.atlassian.net/servicedesk/customer/portals">Contact</a></li>
+              </ul>
+            </nav>
+            <!-- search-form -->
+            <div class="form-holder">
+              <!-- This commented code opens a new page for the search. -->
+              <!--<form class="search-form" method="get" action="https://www.google.com/search" target="_blank">-->
+              <form class="search-form" method="get" action="https://www.google.com/search">
+                <fieldset>
+                  <!--<label for="search">Search</label>-->
+                  <input type="hidden" name="sitesearch" value="minorplanetcenter.net">
+                  <input type="text" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" id="search" name="q" value="Search MPC">
+                </fieldset>
+              </form>
+            </div>
+            <div class="social-bar">
+<!--              <a href="https://twitter.com/MinorPlanetCtr"><span class="social twitter">L</span></a> -->
+<!--              <a href="https://www.facebook.com/MinorPlanetCenter"><span class="social facebook">F</span></a> -->
+<!--              <a href="https://www.youtube.com/channel/UCtALMOQHuBxh5XMsYNiDhMg"><span class="social youtube">X</span></a> -->
+<!--              <a href="/iau/rss/mpc_feeds.html"><span class="social rss">R</span></a> -->
+            </div>
+          </div>
+        </div>
+        <nav class="nav-holder">
+          <!-- main navigation -->
+          <ul id="nav">
+            <li>
+              <a href="/iau/mpc.html"><span>OBSERVERS</span></a>
+              <ul>
+                <li><a href="/iau/MPEph/MPEph.html">Ephemeris Service</a></li>
+                <li><a href="/mpec/RecentMPECs.html">MPECs</a></li>
+                <li><a href="/iau/NEO/toconfirm_tabular.html">NEO Confirmation</a></li>
+                <li><a href="/iau/NEO/pccp_tabular.html">Possible Comet Confirmation</a></li>
+                <li><a href="/iau/Ephemerides/EphemOrbEls.html" class="nested">Orbital Elements</a>
+                  <ul>
+                    <li><a href="/iau/MPCORB.html">MPCORB</a></li>
+                    <li><a href="/iau/ECS/MPCAT/MPCAT.html">MPCAT</a></li>
+                    <li><a href="/iau/ECS/MPCUPDATE/MPCUPDATE.html">MPCUPDATE</a></li>
+                    <li><a href="/iau/Ephemerides/SoftwareEls.html">Orbital Elements for Software</a></li>
+                  </ul>                
+                </li>
+                <li><a href="/iau/services/MPCServices.html">Publications Overview</a></li>
+                <li><a href="/iau/ECS/MPCArchive/MPCArchive_TBL.html">Publications Archive</a></li>              
+                <li><a href="/iau/NEO/TheNEOPage.html" class="nested">NEO Services</a>
+                  <ul>
+                    <li><a href="/iau/NEO/toconfirm_tabular.html">Confirmation</a></li>
+                    <li><a href="/iau/NEO/PossNEO.html">Ratings</a></li>
+                    <li><a href="/cgi-bin/neaobs.cgi">Observation Planning Aid</a></li>
+                    <li><a href="/cgi-bin/checkneo.cgi">NEOChecker</a></li>
+                    <li><a href="/cgi-bin/checkneocmt.cgi">NEOCMTChecker</a></li>
+                    <li><a href="/neocp_followup_report/">NEOCP Followup Report Form</a></li>
+                    <li><a href="/neocp_followup_reports/">NEOCP Followup Reports</a></li>
+                    <li><a href="/neocp_obs">NEOCP Recent Observations</a></li>
+                  </ul>
+                </li>
+                <li><a href="/iau/services/WebCSAccess.html" class="nested">Other Observer Services</a>
+                  <ul>
+                    <li><a href="/whatsup">Observing Target List</a></li>
+                    <li><a href="/iau/NatSats/NaturalSatellites.html">Natural Satellite Ephemerides</a></li>
+                    <li><a href="/iau/MPEph/NewObjEphems.html">New Object Ephemerides</a></li>
+                    <li><a href="/cgi-bin/checkmp.cgi">MPChecker</a></li>
+                    <li><a href="/cgi-bin/checkcmt.cgi">CMTChecker</a></li>
+                    <li><a href="/iau/artsats/artsats.html">Distant Artificial Satellites</a></li>
+                    <li><a href="/iau/lists/Customize.html">Observing List Customizer</a></li>
+                  </ul>
+                </li>
+                <li><a href="/db_search">Orbits/Observations Database</a></li>
+
+                <li><a href='http://alcdef.org'>Light Curve Database</a></li>
+
+                <li><a href="/iau/ECS/MPCAT-OBS/MPCAT-OBS.html">MPCAT-OBS</a></li>
+                <li><a href="/iau/SkyCoverage.html">Sky Coverage</a></li>
+                <li><a href="/iau/MPC_Documentation.html" class="nested">Documentation</a>
+                  <ul>
+                    <li><a href="/iau/info/TechInfo.html">MPC Submission Info</a></li>
+                    <li><a href="/iau/info/Astrometry.html">Astrometry Guide</a></li>
+                    <li><a href="/iau/WhatsNew.html">What's New</a></li>
+                  </ul>                
+                </li>
+                <li><a href="/iau/lists/Lists.html" class="nested">Lists and Plots</a>
+                  <ul>
+                    <li><a href="/iau/lists/MPLists.html">Minor Planets</a></li>
+                      <!--<ul>
+                        <li><a href="/iau/lists/t_atens.html">Atens</a></li>
+                        <li><a href="/iau/lists/t_apollos.html">Apollos</a></li>
+                        <li><a href="/iau/lists/t_amors.html">Amors</a></li>
+                        <li><a href="/iau/lists/t_centaurs.html">Centaurs and Scattered Disk Objects</a></li>
+                        <li><a href="/iau/lists/t_tnos.html">Transneptunian Objects</a></li>
+                        <li><a href="/iau/lists/t_others.html">Other Unusual Objects</a></li>
+                        <li><a href="/iau/lists/t_dangerous.html">Potentially Hazardous Asteroids</a></li>
+                      </ul>-->
+                    <li><a href="/iau/lists/CometLists.html">Comets</a></li>
+                      <!--<ul>
+                        <li><a href="/iau/lists/LastCometObs.html">Date of Last Observation</a></li>
+                        <li><a href="/iau/lists/LastYear.html">Designations from the Past Year</a></li>
+                        <li><a href="http://www.icq.eps.harvard.edu/CometMags.html">Comet Magnitude Estimates</a></li>
+                        <li><a href="/iau/lists/ClosestComets.html">Closest Approaches</a></li>
+                        <li><a href="/iau/lists/PeriodicCodes.html">Periodic Comets</a></li>
+                      </ul>-->
+                    <li><a href="/iau/lists/ObsCodesF.html">Observatory Codes</a></li>		    
+                    <li><a href="/iau/Animations/Animations.html">Animations</a></li>
+                  </ul>                
+                </li>
+                <li><a href="/iau/MPCStatus.html">MPC Status</a></li>
+                <!--<li><a href="/summary">Summary</a></li>-->
+                <li><a href='/mpc/obs_stats_2014_2018'>2014-18 NEO Obs Statistics</a></li>
+                <li><a href='/mpc/summary'>Summary of Latest Data</a></li>
+              </ul>
+            </li>
+            <li><a href="/data"><span>DATA</span></a>
+            </li>
+            <li><a href="http://iawn.net/"><span>IAWN</span></a>
+            </li>
+            <li><a href="https://minorplanetcenter.net/mpcops/beta/"><span>BETA</span></a></li>
+            <li><a href="/iau/MPCStatus.html"><span style="color:Green">STATUS</a></li>
+            <li><a href="https://sbnmpc.astro.umd.edu/"><span>SBN ANNEX</span></a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- main -->
+      <div id="main">
+
+  <h3>
+  
+   1997 UR
+  
+  
+   
+  
+</h3>
+
+    First observed at Lincoln Laboratory ETS, New Mexico
+  on 1997-10-22.
+
+
+  <br>(Discoverer will be defined when the object is numbered. 
+  See <a href="/mpec/K10/K10U20.html">this note</a>
+  on how discoverers are determined.)
+
+
+<br>
+<h2>Orbit</h2>
+
+    Orbit type: Amor
+  <br>
+
+
+    Near-Earth Object<br>
+    One opposition object seen prior.<br>
+
+    <br>
+    <div class="show-orbit-button">
+      <form accept-charset="UTF-8" action="/db_search/show_orbit" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input id="number" name="number" type="hidden" />
+        <input id="designation" name="designation" type="hidden" value="1997 UR" />
+        <input id="name" name="name" type="hidden" />
+        <input id="epoch" name="epoch" type="hidden" value="2019-04-27.0" />
+        <input id="peri" name="peri" type="hidden" value="200.3755249" />
+        <input id="m" name="m" type="hidden" value="60.50322" />
+        <input id="node" name="node" type="hidden" value="213.9856264" />
+        <input id="incl" name="incl" type="hidden" value="2.2655897" />
+        <input id="e" name="e" type="hidden" value="0.312423216" />
+        <input id="a" name="a" type="hidden" value="1.45934444319458" />
+        <input name="commit" type="submit" value="Interactive Orbit Sketch" />
+</form>    </div>
+    <div>
+       Note: WebGL enabled browser required.
+    </div>
+
+    
+
+
+  <br>
+  <table class="nb">
+    <tr>
+      <td valign="top" class="nb">
+        <table>
+          <tr><td>epoch</td><td class="rj">2019-04-27.0</td></tr>
+          <tr><td>epoch JD</td><td class="rj">2458600.5</td></tr>
+          <tr><td>perihelion date</td><td class="rj">2019-01-08.77904</td></tr>
+          <tr><td>perihelion JD</td><td class="rj">2458492.27904</td></tr>
+          <tr><td>argument of perihelion (°)</td><td class="rj">200.37552</td></tr>
+          <tr><td>ascending node (°)</td><td class="rj">213.98563</td></tr>
+          <tr><td>inclination (°)</td><td class="rj">2.26559</td></tr>
+          <tr><td>eccentricity</td><td class="rj">0.3124232</td></tr>
+          <tr><td>perihelion distance (AU)</td><td class="rj">1.0034114</td></tr>
+          <tr><td>Tisserand w.r.t. Jupiter</td><td class="rj">4.6</td></tr>
+          <tr><td>&Delta;V w.r.t. Earth (km/sec)</td><td class="rj">4.7</td></tr>
+        </table>
+      </td>
+      <td valign="top" class="nb">
+        <table>
+          <tr><td>semimajor axis (AU)</td><td class="rj">1.4593444</td></tr>
+          <tr><td>mean anomaly (°)</td><td class="rj">60.50322</td></tr>
+          <tr><td>mean daily motion (°/day)</td><td class="rj">0.55907120</td></tr>
+          <tr><td>aphelion distance (AU)</td><td class="rj">1.915</td></tr>
+          <tr><td>period (years)</td><td class="rj">1.76</td></tr>
+          <tr><td>P-vector [x]</td><td class="rj">0.58282628</td></tr>
+          <tr><td>P-vector [y]</td><td class="rj">0.75091094</td></tr>
+          <tr><td>P-vector [z]</td><td class="rj">0.31055801</td></tr>
+          <tr><td>Q-vector [x]</td><td class="rj">-0.81229626</td></tr>
+          <tr><td>Q-vector [y]</td><td class="rj">0.54877654</td></tr>
+          <tr><td>Q-vector [z]</td><td class="rj">0.19753252</td></tr>
+          <tr><td>absolute magnitude</td><td class="rj">23.2</td></tr>
+          <tr><td>phase slope</td><td class="rj">0.15</td></tr>
+        </table>
+      </td>
+      <td valign="top" class="nb">
+        <table>
+
+            <tr><td><a href="/iau/info/UValue.html">uncertainty</a></td><td class="rj">6</td></tr>
+
+          <tr><td>reference</td><td class="rj">MPO  73932</td></tr>
+          <tr><td>observations used</td><td class="rj">143</td></tr>
+          <tr><td>oppositions</td><td class="rj">1</td></tr>
+          <tr><td>arc length (days)</td><td class="rj">21</td></tr>
+          <tr><td>first opposition used</td><td class="rj">1997</td></tr>
+          <tr><td>last opposition used</td><td class="rj">1997</td></tr>
+          <tr><td>residual rms (arc-secs)</td><td class="rj">0.65</td></tr>
+          <tr><td><a href="/iau/info/Perturbers.html">perturbers coarse indicator</a></td><td class="rj">M-v</td></tr>
+          <tr><td><a href="/iau/info/Perturbers.html">perturbers precise indicator</a></td><td class="rj">003Eh</td></tr>
+          <tr><td>first observation date used</td><td class="rj">1997-10-22.0</td></tr>
+          <tr><td>last observation date used</td><td class="rj">1997-11-12.0</td></tr>
+          <tr><td>computer name</td><td class="rj">MPCW</td></tr>
+        </table>
+      </td>
+    </tr>
+  </table>    
+
+  <table class="nb">
+    <tr>
+      <td valign="top" class="nb">
+      </td>
+      <td width=100px> </td>
+
+      <td valign="top" class="nb">
+    Minimum Orbit Intersection Distances (in AU)<br>for orbit epoch: 2458600.5, reference: MPO<br>
+          <table>
+            <tr><td>Mercury</td><td>0.68949</td></tr>
+            <tr><td>Venus</td><td>0.28128</td></tr>
+            <tr><td>Earth</td><td>0.01737</td></tr>
+            <tr><td>Mars</td><td>0.06932</td></tr>
+            <tr><td>Jupiter</td><td>3.44451</td></tr>
+            <tr><td>Saturn</td><td>7.8696</td></tr>
+            <tr><td>Uranus</td><td>16.5164</td></tr>
+            <tr><td>Neptune</td><td>28.4175</td></tr>
+          </table>    
+          <br>
+      </td>
+    </tr>
+  </table>
+
+
+<h2>Observations</h2>
+  146 total observations over interval:
+  1997 10 22.13909 &ndash; 1997 11 12.45559
+  <br>
+  These data are available for
+  <a href="../tmp/1997_UR.txt" target="_blank">download</a>
+  (<a href="/iau/info/OpticalObs.html" target="_blank">format description</a>).
+  <br>
+  <br>
+  <table>
+    <tr>
+      <th>Date (UT)</th>
+      <th>J2000 RA</th>
+      <th>J2000 Dec</th>
+      <th>Magn</th>
+      <th><a href="/iau/lists/ObsCodesF.html">Location</a></th>
+      <th><a href="/iau/info/References.html">Ref</a></th>
+    </tr>
+
+      <tr>
+        <td class="ff">1997 10 22.13909</td>
+        <td class="ff">02 46 24.81</td>
+        <td class="ff">+22 17 35.8</td>
+        <td class="ff rj">18.0 &nbsp;</td>
+        <td>704 &ndash; Lincoln Laboratory ETS, New Mexico</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.15056</td>
+        <td class="ff">02 46 37.18</td>
+        <td class="ff">+22 17 47.8</td>
+        <td class="ff rj">18.2 &nbsp;</td>
+        <td>704 &ndash; Lincoln Laboratory ETS, New Mexico</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.16189</td>
+        <td class="ff">02 46 49.26</td>
+        <td class="ff">+22 18 01.3</td>
+        <td class="ff rj">18.4 &nbsp;</td>
+        <td>704 &ndash; Lincoln Laboratory ETS, New Mexico</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.17319</td>
+        <td class="ff">02 47 01.34</td>
+        <td class="ff">+22 18 14.5</td>
+        <td class="ff rj">18.1 &nbsp;</td>
+        <td>704 &ndash; Lincoln Laboratory ETS, New Mexico</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.18451</td>
+        <td class="ff">02 47 13.34</td>
+        <td class="ff">+22 18 27.0</td>
+        <td class="ff rj">17.8 &nbsp;</td>
+        <td>704 &ndash; Lincoln Laboratory ETS, New Mexico</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.87918</td>
+        <td class="ff">03 00 29.34</td>
+        <td class="ff">+22 23 34.1</td>
+        <td class="ff rj">17.1 V</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.88042</td>
+        <td class="ff">03 00 30.75</td>
+        <td class="ff">+22 23 34.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.88172</td>
+        <td class="ff">03 00 32.23</td>
+        <td class="ff">+22 23 35.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 22.88287</td>
+        <td class="ff">03 00 33.50</td>
+        <td class="ff">+22 23 35.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.01791</td>
+        <td class="ff">03 03 03.36</td>
+        <td class="ff">+22 24 28.8</td>
+        <td class="ff rj">16.7 V</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.01860</td>
+        <td class="ff">03 03 04.12</td>
+        <td class="ff">+22 24 28.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.02017</td>
+        <td class="ff">03 03 05.88</td>
+        <td class="ff">+22 24 29.2</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.02090</td>
+        <td class="ff">03 03 06.72</td>
+        <td class="ff">+22 24 29.4</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.02147</td>
+        <td class="ff">03 03 07.33</td>
+        <td class="ff">+22 24 29.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.07890</td>
+        <td class="ff">03 04 11.54</td>
+        <td class="ff">+22 24 40.2</td>
+        <td class="ff rj">17.0 V</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.07976</td>
+        <td class="ff">03 04 12.48</td>
+        <td class="ff">+22 24 40.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.08056</td>
+        <td class="ff">03 04 13.41</td>
+        <td class="ff">+22 24 40.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.17583</td>
+        <td class="ff">03 06 02.51</td>
+        <td class="ff">+22 24 25.5</td>
+        <td class="ff rj">17.5 V</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.17653</td>
+        <td class="ff">03 06 03.32</td>
+        <td class="ff">+22 24 25.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.17722</td>
+        <td class="ff">03 06 04.14</td>
+        <td class="ff">+22 24 25.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.17780</td>
+        <td class="ff">03 06 04.84</td>
+        <td class="ff">+22 24 26.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>557 &ndash; Ondrejov</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.32611</td>
+        <td class="ff">03 09 20.80</td>
+        <td class="ff">+22 25 23.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.32765</td>
+        <td class="ff">03 09 22.46</td>
+        <td class="ff">+22 25 23.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.33016</td>
+        <td class="ff">03 09 25.29</td>
+        <td class="ff">+22 25 24.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.55953</td>
+        <td class="ff">03 14 08.68</td>
+        <td class="ff">+22 31 11.9</td>
+        <td class="ff rj">17.5 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.56577</td>
+        <td class="ff">03 14 15.78</td>
+        <td class="ff">+22 31 13.8</td>
+        <td class="ff rj">16.6 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.56711</td>
+        <td class="ff">03 14 17.30</td>
+        <td class="ff">+22 31 13.6</td>
+        <td class="ff rj">16.7 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.56844</td>
+        <td class="ff">03 14 18.86</td>
+        <td class="ff">+22 31 14.2</td>
+        <td class="ff rj">16.3 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.57475</td>
+        <td class="ff">03 14 25.92</td>
+        <td class="ff">+22 31 15.2</td>
+        <td class="ff rj">16.8 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.57607</td>
+        <td class="ff">03 14 27.36</td>
+        <td class="ff">+22 31 15.5</td>
+        <td class="ff rj">16.8 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.57738</td>
+        <td class="ff">03 14 28.91</td>
+        <td class="ff">+22 31 15.7</td>
+        <td class="ff rj">16.8 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.57870</td>
+        <td class="ff">03 14 30.43</td>
+        <td class="ff">+22 31 15.9</td>
+        <td class="ff rj">16.5 &nbsp;</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.60749</td>
+        <td class="ff">03 15 07.09</td>
+        <td class="ff">+22 26 23.8</td>
+        <td class="ff rj">16.9 V</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.60957</td>
+        <td class="ff">03 15 09.26</td>
+        <td class="ff">+22 26 24.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.61165</td>
+        <td class="ff">03 15 11.86</td>
+        <td class="ff">+22 26 24.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.61466</td>
+        <td class="ff">03 15 15.05</td>
+        <td class="ff">+22 26 24.8</td>
+        <td class="ff rj">16.8 V</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.61571</td>
+        <td class="ff">03 15 16.35</td>
+        <td class="ff">+22 26 25.2</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 23.61675</td>
+        <td class="ff">03 15 17.60</td>
+        <td class="ff">+22 26 24.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.32814</td>
+        <td class="ff">03 30 15.67</td>
+        <td class="ff">+22 21 31.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.32882</td>
+        <td class="ff">03 30 16.50</td>
+        <td class="ff">+22 21 31.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.32953</td>
+        <td class="ff">03 30 17.37</td>
+        <td class="ff">+22 21 30.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.58623</td>
+        <td class="ff">03 35 49.50</td>
+        <td class="ff">+22 24 54.6</td>
+        <td class="ff rj">16.6 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.59738</td>
+        <td class="ff">03 36 02.79</td>
+        <td class="ff">+22 24 48.0</td>
+        <td class="ff rj">16.6 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.60012</td>
+        <td class="ff">03 36 06.11</td>
+        <td class="ff">+22 24 46.9</td>
+        <td class="ff rj">16.7 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.60289</td>
+        <td class="ff">03 36 09.41</td>
+        <td class="ff">+22 24 44.6</td>
+        <td class="ff rj">17.1 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.60385</td>
+        <td class="ff">03 36 14.12</td>
+        <td class="ff">+22 19 29.5</td>
+        <td class="ff rj">16.4 V</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.60524</td>
+        <td class="ff">03 36 15.80</td>
+        <td class="ff">+22 19 29.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.60573</td>
+        <td class="ff">03 36 12.82</td>
+        <td class="ff">+22 24 43.2</td>
+        <td class="ff rj">16.2 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.60847</td>
+        <td class="ff">03 36 16.14</td>
+        <td class="ff">+22 24 41.7</td>
+        <td class="ff rj">16.4 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.60926</td>
+        <td class="ff">03 36 20.73</td>
+        <td class="ff">+22 19 27.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.61400</td>
+        <td class="ff">03 36 22.67</td>
+        <td class="ff">+22 24 37.9</td>
+        <td class="ff rj">16.9 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.63073</td>
+        <td class="ff">03 36 47.51</td>
+        <td class="ff">+22 19 20.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>360 &ndash; Kuma Kogen</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.63472</td>
+        <td class="ff">03 36 52.34</td>
+        <td class="ff">+22 19 18.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>360 &ndash; Kuma Kogen</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.64028</td>
+        <td class="ff">03 36 58.95</td>
+        <td class="ff">+22 19 15.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>360 &ndash; Kuma Kogen</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.64306</td>
+        <td class="ff">03 37 02.32</td>
+        <td class="ff">+22 19 14.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>360 &ndash; Kuma Kogen</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.67234</td>
+        <td class="ff">03 37 32.58</td>
+        <td class="ff">+22 23 53.0</td>
+        <td class="ff rj">16.7 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.67512</td>
+        <td class="ff">03 37 35.95</td>
+        <td class="ff">+22 23 50.5</td>
+        <td class="ff rj">16.8 V</td>
+        <td>424 &ndash; Macquarie</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.96672</td>
+        <td class="ff">03 44 10.20</td>
+        <td class="ff">+22 13 45.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>620 &ndash; Observatorio Astronomico de Mallorca</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.96811</td>
+        <td class="ff">03 44 11.90</td>
+        <td class="ff">+22 13 44.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>620 &ndash; Observatorio Astronomico de Mallorca</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 24.97054</td>
+        <td class="ff">03 44 14.86</td>
+        <td class="ff">+22 13 42.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>620 &ndash; Observatorio Astronomico de Mallorca</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.04566</td>
+        <td class="ff">03 45 46.94</td>
+        <td class="ff">+22 12 35.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>620 &ndash; Observatorio Astronomico de Mallorca</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.04740</td>
+        <td class="ff">03 45 49.06</td>
+        <td class="ff">+22 12 33.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>620 &ndash; Observatorio Astronomico de Mallorca</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.25694</td>
+        <td class="ff">03 50 39.96</td>
+        <td class="ff">+22 08 27.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.26667</td>
+        <td class="ff">03 50 51.99</td>
+        <td class="ff">+22 08 20.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.29375</td>
+        <td class="ff">03 51 26.06</td>
+        <td class="ff">+22 07 56.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.51765</td>
+        <td class="ff">03 56 28.18</td>
+        <td class="ff">+22 07 40.5</td>
+        <td class="ff rj">16.3 R</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.51885</td>
+        <td class="ff">03 56 29.70</td>
+        <td class="ff">+22 07 38.9</td>
+        <td class="ff rj">16.3 R</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.52007</td>
+        <td class="ff">03 56 31.22</td>
+        <td class="ff">+22 07 37.9</td>
+        <td class="ff rj">16.4 R</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.52353</td>
+        <td class="ff">03 56 35.59</td>
+        <td class="ff">+22 07 35.0</td>
+        <td class="ff rj">16.6 R</td>
+        <td>422 &ndash; Loomberah</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.60251</td>
+        <td class="ff">03 58 17.89</td>
+        <td class="ff">+22 00 50.7</td>
+        <td class="ff rj">16.8 V</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.60357</td>
+        <td class="ff">03 58 19.27</td>
+        <td class="ff">+22 00 49.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.60460</td>
+        <td class="ff">03 58 20.67</td>
+        <td class="ff">+22 00 48.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.63167</td>
+        <td class="ff">03 58 53.67</td>
+        <td class="ff">+22 00 15.9</td>
+        <td class="ff rj">16.4 V</td>
+        <td>385 &ndash; Nihondaira Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.63358</td>
+        <td class="ff">03 58 56.05</td>
+        <td class="ff">+22 00 12.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>385 &ndash; Nihondaira Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.63503</td>
+        <td class="ff">03 58 57.89</td>
+        <td class="ff">+22 00 11.4</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>385 &ndash; Nihondaira Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.63615</td>
+        <td class="ff">03 58 59.31</td>
+        <td class="ff">+22 00 08.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>385 &ndash; Nihondaira Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.64199</td>
+        <td class="ff">03 59 06.50</td>
+        <td class="ff">+22 00 01.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>385 &ndash; Nihondaira Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.68648</td>
+        <td class="ff">04 00 02.49</td>
+        <td class="ff">+21 58 57.2</td>
+        <td class="ff rj">16.2 V</td>
+        <td>900 &ndash; Moriyama</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.69505</td>
+        <td class="ff">04 00 13.06</td>
+        <td class="ff">+21 58 44.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>900 &ndash; Moriyama</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.69726</td>
+        <td class="ff">04 00 14.75</td>
+        <td class="ff">+21 58 38.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>355 &ndash; Hadano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.69882</td>
+        <td class="ff">04 00 16.73</td>
+        <td class="ff">+21 58 37.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>355 &ndash; Hadano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.70015</td>
+        <td class="ff">04 00 18.28</td>
+        <td class="ff">+21 58 34.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>355 &ndash; Hadano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.70159</td>
+        <td class="ff">04 00 20.24</td>
+        <td class="ff">+21 58 32.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>355 &ndash; Hadano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.88385</td>
+        <td class="ff">04 04 40.59</td>
+        <td class="ff">+21 52 05.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>587 &ndash; Sormano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.88733</td>
+        <td class="ff">04 04 45.17</td>
+        <td class="ff">+21 52 01.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>587 &ndash; Sormano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 25.89080</td>
+        <td class="ff">04 04 49.69</td>
+        <td class="ff">+21 51 56.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>587 &ndash; Sormano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.32050</td>
+        <td class="ff">04 14 26.52</td>
+        <td class="ff">+21 39 48.1</td>
+        <td class="ff rj">17.4 V</td>
+        <td>700 &ndash; Chinle</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.32749</td>
+        <td class="ff">04 14 35.28</td>
+        <td class="ff">+21 39 35.4</td>
+        <td class="ff rj">16.9 V</td>
+        <td>700 &ndash; Chinle</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.35903</td>
+        <td class="ff">04 15 17.97</td>
+        <td class="ff">+21 38 41.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.37882</td>
+        <td class="ff">04 15 42.76</td>
+        <td class="ff">+21 38 04.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.39063</td>
+        <td class="ff">04 15 57.61</td>
+        <td class="ff">+21 37 40.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.41111</td>
+        <td class="ff">04 16 23.18</td>
+        <td class="ff">+21 36 59.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.42743</td>
+        <td class="ff">04 16 43.60</td>
+        <td class="ff">+21 36 24.0</td>
+        <td class="ff rj">17.5 V</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.67991</td>
+        <td class="ff">04 22 30.71</td>
+        <td class="ff">+21 26 56.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>897 &ndash; YGCO Chiyoda Station</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.68772</td>
+        <td class="ff">04 22 40.53</td>
+        <td class="ff">+21 26 38.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>897 &ndash; YGCO Chiyoda Station</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.68993</td>
+        <td class="ff">04 22 43.37</td>
+        <td class="ff">+21 26 32.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>897 &ndash; YGCO Chiyoda Station</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.69226</td>
+        <td class="ff">04 22 46.15</td>
+        <td class="ff">+21 26 28.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>897 &ndash; YGCO Chiyoda Station</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.69441</td>
+        <td class="ff">04 22 48.90</td>
+        <td class="ff">+21 26 23.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>897 &ndash; YGCO Chiyoda Station</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.93021</td>
+        <td class="ff">04 28 20.68</td>
+        <td class="ff">+21 15 45.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>587 &ndash; Sormano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 26.93229</td>
+        <td class="ff">04 28 23.34</td>
+        <td class="ff">+21 15 40.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>587 &ndash; Sormano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.02922</td>
+        <td class="ff">04 30 27.32</td>
+        <td class="ff">+21 12 07.6</td>
+        <td class="ff rj">17.7 V</td>
+        <td>104 &ndash; San Marcello Pistoiese</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.03038</td>
+        <td class="ff">04 30 28.85</td>
+        <td class="ff">+21 12 05.2</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>104 &ndash; San Marcello Pistoiese</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.03171</td>
+        <td class="ff">04 30 30.40</td>
+        <td class="ff">+21 12 02.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>104 &ndash; San Marcello Pistoiese</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.03709</td>
+        <td class="ff">04 30 37.23</td>
+        <td class="ff">+21 11 49.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>104 &ndash; San Marcello Pistoiese</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.26458</td>
+        <td class="ff">04 35 57.16</td>
+        <td class="ff">+21 01 57.4</td>
+        <td class="ff rj">16.5 V</td>
+        <td>700 &ndash; Chinle</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.27503</td>
+        <td class="ff">04 36 10.46</td>
+        <td class="ff">+21 01 33.7</td>
+        <td class="ff rj">16.8 V</td>
+        <td>700 &ndash; Chinle</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.27914</td>
+        <td class="ff">04 36 15.72</td>
+        <td class="ff">+21 01 24.0</td>
+        <td class="ff rj">16.5 V</td>
+        <td>700 &ndash; Chinle</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.70434</td>
+        <td class="ff">04 45 42.30</td>
+        <td class="ff">+20 41 35.2</td>
+        <td class="ff rj">17.6 V</td>
+        <td>360 &ndash; Kuma Kogen</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.70677</td>
+        <td class="ff">04 45 45.31</td>
+        <td class="ff">+20 41 27.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>360 &ndash; Kuma Kogen</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 27.71024</td>
+        <td class="ff">04 45 49.67</td>
+        <td class="ff">+20 41 17.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>360 &ndash; Kuma Kogen</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 28.18773</td>
+        <td class="ff">04 56 33.68</td>
+        <td class="ff">+20 20 29.5</td>
+        <td class="ff rj">16.2 R</td>
+        <td>861 &ndash; Barao Geraldo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 28.18924</td>
+        <td class="ff">04 56 35.63</td>
+        <td class="ff">+20 20 24.9</td>
+        <td class="ff rj">16.5 R</td>
+        <td>861 &ndash; Barao Geraldo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 28.40451</td>
+        <td class="ff">05 01 19.60</td>
+        <td class="ff">+20 03 43.4</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 28.45104</td>
+        <td class="ff">05 02 16.23</td>
+        <td class="ff">+20 01 03.4</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 28.46771</td>
+        <td class="ff">05 02 36.47</td>
+        <td class="ff">+20 00 03.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.02983</td>
+        <td class="ff">05 14 58.45</td>
+        <td class="ff">+19 24 48.4</td>
+        <td class="ff rj">17.2 V</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.03157</td>
+        <td class="ff">05 15 00.53</td>
+        <td class="ff">+19 24 42.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.03271</td>
+        <td class="ff">05 15 01.90</td>
+        <td class="ff">+19 24 38.2</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.03360</td>
+        <td class="ff">05 15 02.99</td>
+        <td class="ff">+19 24 34.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.49933</td>
+        <td class="ff">05 25 01.27</td>
+        <td class="ff">+18 56 41.4</td>
+        <td class="ff rj">17.6 R</td>
+        <td>566 &ndash; Haleakala-NEAT/GEODSS</td>
+        <td class="ff lj">MPS 119187</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.50884</td>
+        <td class="ff">05 25 12.16</td>
+        <td class="ff">+18 56 05.1</td>
+        <td class="ff rj">17.5 R</td>
+        <td>566 &ndash; Haleakala-NEAT/GEODSS</td>
+        <td class="ff lj">MPS 119187</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.66784</td>
+        <td class="ff">05 28 34.61</td>
+        <td class="ff">+18 49 14.2</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>426 &ndash; Woomera</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.67038</td>
+        <td class="ff">05 28 37.46</td>
+        <td class="ff">+18 49 04.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>426 &ndash; Woomera</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.69052</td>
+        <td class="ff">05 29 00.52</td>
+        <td class="ff">+18 42 40.3</td>
+        <td class="ff rj">17.2 V</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.69141</td>
+        <td class="ff">05 29 01.55</td>
+        <td class="ff">+18 42 36.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 29.69231</td>
+        <td class="ff">05 29 02.58</td>
+        <td class="ff">+18 42 33.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>402 &ndash; Dynic Astronomical Observatory</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.18655</td>
+        <td class="ff">05 38 58.56</td>
+        <td class="ff">+18 07 15.7</td>
+        <td class="ff rj">18.3 V</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.18784</td>
+        <td class="ff">05 39 00.01</td>
+        <td class="ff">+18 07 10.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.18955</td>
+        <td class="ff">05 39 01.88</td>
+        <td class="ff">+18 07 02.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>046 &ndash; Klet Observatory, Ceske Budejovice</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.40486</td>
+        <td class="ff">05 43 35.25</td>
+        <td class="ff">+17 53 03.5</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.40833</td>
+        <td class="ff">05 43 39.07</td>
+        <td class="ff">+17 52 48.2</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.42118</td>
+        <td class="ff">05 43 53.20</td>
+        <td class="ff">+17 51 54.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.42222</td>
+        <td class="ff">05 43 54.44</td>
+        <td class="ff">+17 51 50.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 30.42500</td>
+        <td class="ff">05 43 57.27</td>
+        <td class="ff">+17 51 39.4</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 31.41215</td>
+        <td class="ff">06 02 59.68</td>
+        <td class="ff">+16 39 31.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 31.41319</td>
+        <td class="ff">06 03 00.64</td>
+        <td class="ff">+16 39 26.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>670 &ndash; Camarillo</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 31.70642</td>
+        <td class="ff">06 08 23.18</td>
+        <td class="ff">+16 22 28.1</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>426 &ndash; Woomera</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 31.70780</td>
+        <td class="ff">06 08 24.52</td>
+        <td class="ff">+16 22 22.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>426 &ndash; Woomera</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 10 31.72120</td>
+        <td class="ff">06 08 37.75</td>
+        <td class="ff">+16 21 24.9</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>426 &ndash; Woomera</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 11 05.78349</td>
+        <td class="ff">07 21 45.75</td>
+        <td class="ff">+10 21 20.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>381 &ndash; Tokyo-Kiso</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 11 05.78539</td>
+        <td class="ff">07 21 46.94</td>
+        <td class="ff">+10 21 12.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>381 &ndash; Tokyo-Kiso</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 11 05.78687</td>
+        <td class="ff">07 21 47.77</td>
+        <td class="ff">+10 21 07.8</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>381 &ndash; Tokyo-Kiso</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 11 09.03639</td>
+        <td class="ff">07 52 43.03</td>
+        <td class="ff">+07 23 32.7</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>587 &ndash; Sormano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 11 09.03998</td>
+        <td class="ff">07 52 44.69</td>
+        <td class="ff">+07 23 22.0</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>587 &ndash; Sormano</td>
+        <td class="ff lj">MPS 124</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 11 12.45433</td>
+        <td class="ff">08 16 04.68</td>
+        <td class="ff">+05 01 18.6</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 200</td>
+      </tr>
+      <tr>
+        <td class="ff">1997 11 12.45559</td>
+        <td class="ff">08 16 05.03</td>
+        <td class="ff">+05 01 16.3</td>
+        <td class="ff rj"> &nbsp;</td>
+        <td>658 &ndash; Dominion Astrophysical Observatory</td>
+        <td class="ff lj">MPS 200</td>
+      </tr>
+  </table>
+
+
+        </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="holder">
+      <nav class="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+	  <!-- Contact link changed to Jira -->
+          <li><a href="https://mpc-service.atlassian.net/servicedesk/customer/portals">Contact</a></li>
+          <li><a href="https://www.cfa.harvard.edu/content/privacy-statement">Privacy</a></li>
+        </ul>
+      </nav>
+      
+      <a href="https://www.cfa.harvard.edu">
+      <img src="/images/CfA_Logo_Vertical_CMYK.png" width="110" height="47"></a>
+      <p>
+      <p>
+      <p>
+      <div class="copy">The Minor Planet Center is hosted by the Center for Astrophysics | Harvard &amp; Smithsonian.<center>The Minor Planet Center is funded by NASA.</center></div> 
+  </footer>
+
+<script type="text/javascript">
+  $(window).on('load', (function() {
+    $("table").tablesorter();
+  })); 
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+}
+_tag.dcsCollect();
+//]]>
+</script>
+
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//logs1.smithsonian.museum/dcsa7yzrmbdzpxzrosrn4tyep_5i1d/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.minorplanetcenter.net"/></div>
+</noscript>
+</body>
+
+</html>
