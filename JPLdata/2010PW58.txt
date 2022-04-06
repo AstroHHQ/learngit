@@ -1,0 +1,177 @@
+
+
+*******************************************************************************
+Ephemeris / WWW_USER Wed Apr  6 03:44:31 2022 Pasadena, USA      / Horizons
+*******************************************************************************
+Target body name: (2010 KD149)                    {source: JPL#1}
+Center body name: Solar System Barycenter (0)     {source: DE441}
+Center-site name: BODY CENTER
+*******************************************************************************
+Start time      : A.D. 2010-Mar-03 10:56:44.1888 UT 
+Stop  time      : A.D. 2010-Jun-06 13:28:04.3968 UT 
+Step-size       : DISCRETE TIME-LIST
+*******************************************************************************
+Center geodetic : 0.00000000,0.00000000,0.0000000 {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.00000000,0.00000000,0.0000000 {E-lon(deg),Dxy(km),Dz(km)}
+Center radii    : (undefined)                                                  
+Small perturbers: Yes                             {source: SB441-N16}
+Output units    : AU-D
+Output type     : GEOMETRIC cartesian states
+Output format   : 3 (position, velocity, LT, range, range-rate)
+EOP file        : eop.220404.p220628
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2022-APR-04. PREDICTS-> 2022-JUN-27
+Reference frame : Ecliptic of J2000.0
+*******************************************************************************
+Initial IAU76/J2000 heliocentric ecliptic osculating elements (au, days, deg.):
+  EPOCH=  2456320.5 ! 2013-Jan-28.00 (TDB)         Residual RMS= .50146        
+   EC= .2118005772187966   QR= .7003342535332625   TP= 2456448.0464114249      
+   OM= 324.4987508771402   W=  130.9664340073851   IN= 14.23666533279795       
+  Equivalent ICRF heliocentric cartesian coordinates (au, au/d):
+   X= 4.666142897538790E-01  Y=-8.147717269461162E-01  Z=-4.905351184486401E-01
+  VX= 1.265973027736253E-02 VY= 5.392151396891120E-03 VZ= 6.024077105102667E-03
+Asteroid physical parameters (km, seconds, rotational period in hours):        
+   GM= n.a.                RAD= .1065              ROTPER= n.a.                
+   H= 21.7                 G= .150                 B-V= n.a.                   
+                           ALBEDO= .118            STYP= n.a.                  
+*******************************************************************************
+JDUT 
+   X     Y     Z
+   VX    VY    VZ
+   LT    RG    RR
+*******************************************************************************
+$$SOE
+2455258.956067000 = A.D. 2010-Mar-03 10:56:44.1888 UTC 
+  -6.995386560421348E-01  3.241530160767980E-01 -3.588842206636175E-02
+  -1.130889600692709E-02 -1.685931036614622E-02 -5.147449963311059E-03
+   4.457703119972635E-03  7.718273692784769E-01  3.408466156302530E-03
+2455258.956195000 = A.D. 2010-Mar-03 10:56:55.2480 UTC 
+  -6.995401035765406E-01  3.241508580841629E-01 -3.588908093951453E-02
+  -1.130883765992073E-02 -1.685933733980175E-02 -5.147446952068889E-03
+   4.457705639738390E-03  7.718278055623932E-01  3.408472620265191E-03
+2455259.022283000 = A.D. 2010-Mar-03 12:32:05.2512 UTC 
+  -7.002864865172448E-01  3.230361986684251E-01 -3.622921389133709E-02
+  -1.127870954372409E-02 -1.687323384249546E-02 -5.145885523080951E-03
+   4.459007264160508E-03  7.720531748448405E-01  3.411803787874212E-03
+2455259.088499000 = A.D. 2010-Mar-03 14:07:26.3136 UTC 
+  -7.010323179815705E-01  3.219184613142447E-01 -3.656990168250013E-02
+  -1.124851753072553E-02 -1.688709655709423E-02 -5.144307704424572E-03
+   4.460312682368303E-03  7.722792010009154E-01  3.415128883767781E-03
+2455259.154587000 = A.D. 2010-Mar-03 15:42:36.3168 UTC 
+  -7.017747141230598E-01  3.208019713500956E-01 -3.690982628686042E-02
+  -1.121837848645474E-02 -1.690087193653922E-02 -5.142719626561286E-03
+   4.461616842666307E-03  7.725050093566618E-01  3.418435060681848E-03
+2455259.286891000 = A.D. 2010-Mar-03 18:53:07.3824 UTC 
+  -7.032549582843609E-01  3.185641034270600E-01 -3.759001630184030E-02
+  -1.115802638558276E-02 -1.692826783980137E-02 -5.139500563321923E-03
+   4.464231469187870E-03  7.729577179053182E-01  3.425016352126292E-03
+2455259.353107000 = A.D. 2010-Mar-03 20:28:28.4448 UTC 
+  -7.039927979014158E-01  3.174427299657553E-01 -3.793027954590886E-02
+  -1.112781358588156E-02 -1.694188822737974E-02 -5.137869587564956E-03
+   4.465541930734985E-03  7.731846172885271E-01  3.428291434713890E-03
+2455259.419323000 = A.D. 2010-Mar-03 22:03:49.5072 UTC 
+  -7.047286367862140E-01  3.163204566207377E-01 -3.827043435524224E-02
+  -1.109759593063926E-02 -1.695544809761016E-02 -5.136225386023823E-03
+   4.466853642388111E-03  7.734117331208821E-01  3.431554022484835E-03
+2455352.804340000 = A.D. 2010-Jun-05 07:18:14.9760 UTC 
+  -2.416618196626822E-01 -1.002814920745131E+00 -2.426025929192163E-01
+   1.410648864940912E-02 -4.986143676676434E-03  1.047572493401474E-03
+   6.120126367813758E-03  1.059667031875046E+00  1.261750829736627E-03
+2455353.002860000 = A.D. 2010-Jun-05 12:04:07.1040 UTC 
+  -2.388602433188667E-01 -1.003799859224549E+00 -2.423934435775782E-01
+   1.411811261745858E-02 -4.936667951312070E-03  1.059510177960042E-03
+   6.121567087635274E-03  1.059916484779329E+00  1.251374497954898E-03
+2455353.135036000 = A.D. 2010-Jun-05 15:14:27.1104 UTC 
+  -2.369936608405396E-01 -1.004450190847111E+00 -2.422528770866207E-01
+   1.412577075657035E-02 -4.903720097693179E-03  1.067447782860877E-03
+   6.122519730139132E-03  1.060081429715729E+00  1.244463048476252E-03
+2455353.135163000 = A.D. 2010-Jun-05 15:14:38.0832 UTC 
+  -2.369918668673036E-01 -1.004450813617513E+00 -2.422527415202769E-01
+   1.412577808363045E-02 -4.903688437577661E-03  1.067455405556346E-03
+   6.122520642938869E-03  1.060081587762104E+00  1.244456406602770E-03
+2455353.201252000 = A.D. 2010-Jun-05 16:49:48.1728 UTC 
+  -2.360581825034250E-01 -1.004774349044458E+00 -2.421820634043554E-01
+   1.412958286272882E-02 -4.887212314522974E-03  1.071421087258025E-03
+   6.122994990073296E-03  1.060163718422455E+00  1.240999790230720E-03
+2455353.531947000 = A.D. 2010-Jun-06 00:46:00.2208 UTC 
+  -2.313824812206474E-01 -1.006376891694380E+00 -2.418244725518275E-01
+   1.414837788182188E-02 -4.804750237342919E-03  1.091232651815048E-03
+   6.125348696035737E-03  1.060571249976745E+00  1.223695314438967E-03
+2455354.061162000 = A.D. 2010-Jun-06 13:28:04.3968 UTC 
+  -2.238871657827655E-01 -1.008884705056267E+00 -2.412386098346399E-01
+   1.417761352406986E-02 -4.672720884348757E-03  1.122826677437520E-03
+   6.129046554074403E-03  1.061211514248531E+00  1.195974372646636E-03
+$$EOE
+*******************************************************************************
+ 
+TIME
+
+ Times PRIOR to 1962 are UT1, a mean-solar time closely related to the
+prior but now-deprecated GMT. Times AFTER 1962 are in UTC, the current
+civil or "wall-clock" time-scale. UTC is kept within 0.9 seconds of UT1
+using integer leap-seconds for 1972 and later years.
+
+  Conversion from the internal Barycentric Dynamical Time (TDB) of solar
+system dynamics to the discontinuous civil UT time-scale has not been
+determined for UTC times after the next July or January 1st. Therefore,
+the last known leap-second is used as a constant over future intervals,
+a condition noted here as "UT~".
+
+  Future but as yet undetermined leap-seconds can be expected to change
+time-tags in the "UT~" interval and, in general, the UT scale may not be
+suitable for purposes that assume time-continuity in the ephemeris.
+Output in continuous TDB and TT timescales may be requested, though these
+are not linked to Earth's rotation.
+
+  Time tags refer to the UT time-scale conversion from TDB on Earth
+regardless of observer location within the solar system, although clock
+rates may differ due to the local gravity field and no analog to "UT"
+may be defined for that location.
+
+ Calendar dates prior to 1582-Oct-15 are in the Julian calendar system.
+Later calendar dates are in the Gregorian system.
+
+REFERENCE FRAME AND COORDINATES
+
+  Ecliptic at the standard reference epoch
+
+    Reference epoch: J2000.0
+    X-Y plane: adopted Earth orbital plane at the reference epoch
+               Note: IAU76 obliquity of 84381.448 arcseconds wrt ICRF X-Y plane
+    X-axis   : ICRF
+    Z-axis   : perpendicular to the X-Y plane in the directional (+ or -) sense
+               of Earth's north pole at the reference epoch.
+
+  Symbol meaning [1 au= 149597870.700 km, 1 day= 86400.0 s]:
+
+    JDUT     Julian Day Number, Universal Time
+      X      X-component of position vector (au)
+      Y      Y-component of position vector (au)
+      Z      Z-component of position vector (au)
+      VX     X-component of velocity vector (au/day)                           
+      VY     Y-component of velocity vector (au/day)                           
+      VZ     Z-component of velocity vector (au/day)                           
+      LT     One-way down-leg Newtonian light-time (day)
+      RG     Range; distance from coordinate center (au)
+      RR     Range-rate; radial velocity wrt coord. center (au/day)
+
+ABERRATIONS AND CORRECTIONS
+
+ Geometric state vectors have NO corrections or aberrations applied.
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/hrzn_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Author      : Jon.D.Giorgini@jpl.nasa.gov
+*******************************************************************************
