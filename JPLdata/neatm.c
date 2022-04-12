@@ -10,10 +10,7 @@
 #define cl   299792458.0        //lightspeed m/s
 #define au   149597870700.0
 #define pi   3.1415926535
-int jiechen(int a){
-    if (a==0){return 1;}
-    return a*jiechen(a-1);
-}
+
 double flux(double eta,double D,double delta,double dd,double alpha,double lamda,double A,int Ndd){
     double summ = 0;
     double a = alpha-pi/2;
