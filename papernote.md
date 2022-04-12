@@ -9,3 +9,4 @@ We computed b-values for a set of B-type asteroids and S-complex asteroids, whic
 的自转、热惯量、表面粗糙等因素对其表面温度分布的修正因子，而对于不同的小行星，
 这些因素影响的大小自然是不同的；但是对于近地小行星来说这些因素的影响是很显著
 的，所以 η 不应当取定值
+ceshi
