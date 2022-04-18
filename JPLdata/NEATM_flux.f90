@@ -15,16 +15,31 @@ real(8),parameter :: pi = 3.141592653589793
 real(8),parameter :: SR = 6.9550826d8
 !--------------------------------------
 !variables:
+character (len=15) ::syita,sDia,sdao,sdast,salpha,swlenth,sA
 real(8) :: G,pv,qph,A,yita,Dia,wlenth,flux_i,alpha,dast,dao
 !slope parameter,geometric albedo, phase integral, bond albedo, beaming parameter, diameter
 !real(8) :: dast,dao,dobs,alpha(epn),cos_alpha,astp(3),obsp(3)
 ! heliocentric distance, ast-observer distance, observer-sun ditance, phase angle, cosine of phase angle, ast cartesian coord, obs coord
 integer(4) :: i,j,k
 real(8),external :: dist
-
+call get_command_argument(1,syita)
+read(syita,"(f8.3)")yita
+call get_command_argument(2,sDia)
+read(sDia,"(f8.3)")Dia
+call get_command_argument(3,sdao)
+read(sdao,"(f8.3)")dao
+call get_command_argument(4,sdast)
+read(sdast,"(f8.3)")dast
+call get_command_argument(5,salpha)
+read(salpha,"(f8.3)")alpha
+call get_command_argument(6,swlenth)
+read(swlenth,"(f8.3)")wlenth
+call get_command_argument(7,sA)
+read(sA,"(f8.3)")A
+!call get_command_argument(8,the_name)
 
 call neatm_flux(flux_i,dast,dao,alpha,Dia,wlenth,yita,A,h,c,epsi,f_solar,sigmas,au,kb)
-write(*,*)dast,dao,alpha(i),Dia,wlenth,yita,A,h,c,epsi,f_solar,sigmas,au,kb
+write(*,*)dast,dao,alpha,Dia,wlenth,yita,A,h,c,epsi,f_solar,sigmas,au,kb
 write(*,*)flux_i
 
 end program
