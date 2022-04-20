@@ -3,7 +3,6 @@ program main
 implicit none
 !--------------------------------------
 !constants:
-integer(4),parameter :: epn = 2  !number of epochs
 real(8),parameter :: epsi = 0.9
 real(8),parameter :: sigmas = 5.67d-8
 real(8),parameter :: f_solar = 1367.5
@@ -38,22 +37,22 @@ call get_command_argument(7,sA)
 read(sA,"(f8.5)")A
 
 !print
-print *,' hello' 
-print 100
+!print *,' hello' 
+!print 100
 100 format (5x,'dast:', 5x, 'dao:', 5x, 'alpha:', 5x, 'dia:',5x, 'wlenth:',5x, 'yita:',5x, 'A:')
-print 200, dast,dao,alpha,dia,wlenth,yita,A 
+!print 200, dast,dao,alpha,dia,wlenth,yita,A 
 200 format(f10.6,f10.6,f10.6,f10.6,f10.6,f10.6,f10.6)
 
 !call get_command_argument(8,the_name)
 
 call neatm_flux(flux_i,dast,dao,alpha,Dia,wlenth,yita,A,h,c,epsi,f_solar,sigmas,au,kb)
-print 300
+!print 300
 300 format (7x,'h:', 7x, 'c:', 7x, 'epsi:', 7x, 'F_un:',7x, 'sigmas:',7x, 'au:',7x, 'kb')
-print 400, h,c,epsi,f_solar,sigmas,au,kb 
+!print 400, h,c,epsi,f_solar,sigmas,au,kb 
 400 format(e10.3,e10.3,e10.3,e10.3,e10.3,e10.3,e10.3)
 
-print'(/,"Flux_i = ",e10.4)',flux_i
-
+!print'(/,"Flux_i = ",e10.4)',flux_i
+print*,flux_i
 end program
 
 
@@ -80,8 +79,9 @@ do j = 1,dp
 		theta = -pi / 2 + (k - 1) * dtheta
 		phi = -pi / 2 + (j - 1) * dphi
 		temp(j,k) = T_ss * abs(cos(theta)) ** 0.25 * abs(cos(phi)) ** 0.25
-		flux = flux + flux_con / 4 * abs(cos(alpha)) * abs(cos(alpha - theta)) / (2 * (dao * au) ** 2) &
+		flux = flux + flux_con / abs(cos(phi)**2)* abs(cos(alpha - theta)) / (2 * (dao * au) ** 2) &
 		/ (exp(h * c / (wlenth * kb * temp(j,k))) - 1) * dphi * dtheta * wlenth ** 2 / c * 1d29 ! obtain flux in unit of mjy
+		!flux = flux + flux_con * abs(cos(phi) ** 2) * abs(cos(alpha - theta)) / (2 * (dao * au) ** 2) / (exp(h * c / (wlenth * kb * temp(j,k))) - 1) * dphi*dtheta * wlenth ** 2 / c * 10 ** 29 ! obtain flux in unit of mjy
 	end do
 end do
 
