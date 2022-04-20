@@ -22,25 +22,37 @@ real(8) :: G,pv,qph,A,yita,Dia,wlenth,flux_i,alpha,dast,dao
 ! heliocentric distance, ast-observer distance, observer-sun ditance, phase angle, cosine of phase angle, ast cartesian coord, obs coord
 integer(4) :: i,j,k
 real(8),external :: dist
-call get_command_argument(1,syita)
-read(syita,"(f8.3)")yita
-call get_command_argument(2,sDia)
-read(sDia,"(f8.3)")Dia
-call get_command_argument(3,sdao)
-read(sdao,"(f8.3)")dao
-call get_command_argument(4,sdast)
-read(sdast,"(f8.3)")dast
-call get_command_argument(5,salpha)
-read(salpha,"(f8.3)")alpha
-call get_command_argument(6,swlenth)
-read(swlenth,"(f8.3)")wlenth
+call get_command_argument(1,sdast)
+read(sdast,"(f8.5)")dast
+call get_command_argument(2,sdao)
+read(sdao,"(f8.5)")dao
+call get_command_argument(3,salpha)
+read(salpha,"(f8.5)")alpha
+call get_command_argument(4,sDia)
+read(sDia,"(f8.5)")Dia
+call get_command_argument(5,swlenth)
+read(swlenth,"(f8.5)")wlenth
+call get_command_argument(6,syita)
+read(syita,"(f8.5)")yita
 call get_command_argument(7,sA)
-read(sA,"(f8.3)")A
+read(sA,"(f8.5)")A
+
+!print
+print *,' hello' 
+print 100
+100 format (5x,'dast:', 5x, 'dao:', 5x, 'alpha:', 5x, 'dia:',5x, 'wlenth:',5x, 'yita:',5x, 'A:')
+print 200, dast,dao,alpha,dia,wlenth,yita,A 
+200 format(f10.6,f10.6,f10.6,f10.6,f10.6,f10.6,f10.6)
+
 !call get_command_argument(8,the_name)
 
 call neatm_flux(flux_i,dast,dao,alpha,Dia,wlenth,yita,A,h,c,epsi,f_solar,sigmas,au,kb)
-write(*,*)dast,dao,alpha,Dia,wlenth,yita,A,h,c,epsi,f_solar,sigmas,au,kb
-write(*,*)flux_i
+print 300
+300 format (7x,'h:', 7x, 'c:', 7x, 'epsi:', 7x, 'F_un:',7x, 'sigmas:',7x, 'au:',7x, 'kb')
+print 400, h,c,epsi,f_solar,sigmas,au,kb 
+400 format(e10.3,e10.3,e10.3,e10.3,e10.3,e10.3,e10.3)
+
+print'(/,"Flux_i = ",e10.4)',flux_i
 
 end program
 
