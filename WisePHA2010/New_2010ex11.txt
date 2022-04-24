@@ -1,0 +1,2 @@
+mjd	w1mpro	w2mpro	w3mpro	w4mpro	ph_qual	sso_flg
+55352.701252	16.245	15.332	11.509	7.952	BUUU	1
