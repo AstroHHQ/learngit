@@ -29,7 +29,7 @@ double flux(double eta,double D,double delta,double dd,double alpha,double lamda
         }
     }
     double F = (epsi*pow(D,2)*pi*h*cl*cl)*summ/(2*pow(delta,2)*pow(lamda,5));
-    F = F*(lamda*1e-6)*(lamda*1e-6)/cl*1e29;
+    F = F*(lamda)*(lamda)/cl*1e29;
     return F;
 }
 int main(int argc,char*argv[]){
