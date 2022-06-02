@@ -24,11 +24,11 @@ double flux(double eta,double D,double delta,double dd,double alpha,double lamda
             double phii = (c+(d-c)*j/Ndd);
             double thei = (a+(b-a)*i/Ndd);
             double T = Tfit*pow(cos(thei),0.25)*pow(cos(phii),0.25);
-            double integral = cos(alpha)*cos(alpha)*cos(alpha-thei)/(exp(h*cl/(lamda*kB*T))-1);
+            double integral = cos(phii)*cos(phii)*cos(alpha-thei)/(exp(h*cl/(lamda*kB*T))-1);
             summ = summ + dxdy*integral;
         }
     }
-    double F = (epsi*pow(D,2)*pi*h*cl*cl)*summ/(2*pow(delta,2)*pow(lamda,5));
+    double F = (epsi*pow(D,2)*pi*h*cl*cl)*summ/(2*pow(delta*au,2)*pow(lamda,5));
     F = F*(lamda)*(lamda)/cl*1e29;
     return F;
 }
@@ -47,6 +47,7 @@ int main(int argc,char*argv[]){
     lamda = atof(argv[6]);
     A = atof(argv[7]);
     Ndd = atof(argv[8]);
+    //printf("%f",eta);
     printf("%f",flux(eta,D,delta,d,alpha,lamda,A,Ndd));
     return 0;
 }
