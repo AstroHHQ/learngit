@@ -58,6 +58,9 @@ def get_phase_dist(past,pobs):
 
 
 def get_flux_noref(astp,obsp,Dia,wlenth,yita,A):
+    '''
+    flux without ref
+    '''
     #constants---------------------------------------------------------------------------
     #emissivity:
     epsi = 0.9
