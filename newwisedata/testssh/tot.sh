@@ -1,5 +1,6 @@
-#!bin/bash
+python3 1994CB.py &
 python3 1996GQ.py &
+python3 2002LT24.py &
 python3 2003MA3.py &
 python3 2008NP3.py &
 python3 2009UX17.py &
@@ -8,7 +9,9 @@ python3 2010BH115.py &
 python3 2010CA55.py &
 python3 2010CC55.py &
 python3 2010CN141.py &
+python3 2010CO1.py &
 python3 2010DG77.py &
+python3 2010DH77.py &
 python3 2010EX11.py &
 python3 2010FA81.py &
 python3 2010FC81.py &
@@ -19,6 +22,7 @@ python3 2010HW81.py &
 python3 2010HX107.py &
 python3 2010HZ104.py &
 python3 2010JN71.py &
+python3 2010JX16.py &
 python3 2010KP10.py &
 python3 2010KU7.py &
 python3 2010KX7.py &
@@ -28,9 +32,12 @@ python3 2010LK68.py &
 python3 2010LL68.py &
 python3 2010LV108.py &
 python3 2010NS36.py &
+python3 2010NY65.py &
+python3 2010OH126.py &
 python3 2010PU66.py &
 python3 2010PW58.py &
 python3 2010XP69.py &
 python3 2014FD7.py &
+python3 2015TF.py &
 python3 2016UH101.py &
-python3 2019DD2.py 
+python3 2019DD2.py &
