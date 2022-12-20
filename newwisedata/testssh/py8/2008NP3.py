@@ -1,5 +1,5 @@
 '''
-yerr = erry
+yerr = y*0.1
 eta_gs = [0,10] 
 d_gs=[0,600]
 w234
@@ -23,13 +23,13 @@ pi = 3.1415926535
 Rsun = 0.00465*au   #Rsun *m
 Tsun = 5778         #Tsun  K
 Hv = 22.1
-#hvhv
+Hv = 22.83
 G = 0.15
 Ndd = 15
 lamdai = [3.4,4.6,12,22]
 #.load epoch& cal epoch define x...................................................................
 name = '2015TF'
-#name
+name = '2008NP3'
 lenchan = 20
 lenstep = 4000
 #df = pd.read_table(f'ws.dat.{name}')
@@ -59,10 +59,6 @@ w3 = obsdat[2*n4:n4*3]
 w4 = obsdat[n4*3:]
 y = obsdat
 y = y[n4:]
-#.......yerr..............
-errdat = np.loadtxt(f'./daterr/obsNEWerr.txt.{name}')
-erry = errdat[:]
-erry = erry[n4:]
 #..model.......................................................
 def Model_neatm_Ref_jhx(theta,x,lamda):
     '''
@@ -138,7 +134,7 @@ theta = [eta, D,wf]
 import emcee
 #initialize sampler
 ndim, nwalkers = len(theta), lenchan
-sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(xt, y, erry))
+sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(xt, y, y*0.01))
 pos = [theta + 1e-6*np.random.randn(ndim) for i in range(nwalkers)]
 #run mcmc
 sampler.run_mcmc(pos, lenstep, progress=True);
@@ -175,5 +171,5 @@ def loss(obs,cal,err):
     return sum(((obs-cal)/err)**2)/l
 print('err=1 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),1))
 print('err=y*0.01 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),y*0.01))
-print('err=erry : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),erry))
+
 

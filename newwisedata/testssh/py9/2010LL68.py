@@ -1,8 +1,8 @@
 '''
-yerr = erry
+yerr = y*0.1
 eta_gs = [0,10] 
 d_gs=[0,600]
-w234
+w3w4
 '''
 #import
 import numpy as np
@@ -23,13 +23,13 @@ pi = 3.1415926535
 Rsun = 0.00465*au   #Rsun *m
 Tsun = 5778         #Tsun  K
 Hv = 22.1
-#hvhv
+Hv = 22.9
 G = 0.15
 Ndd = 15
 lamdai = [3.4,4.6,12,22]
 #.load epoch& cal epoch define x...................................................................
 name = '2015TF'
-#name
+name = '2010LL68'
 lenchan = 20
 lenstep = 4000
 #df = pd.read_table(f'ws.dat.{name}')
@@ -58,19 +58,19 @@ w2 = obsdat[n4:2*n4]
 w3 = obsdat[2*n4:n4*3]
 w4 = obsdat[n4*3:]
 y = obsdat
-y = y[n4:]
+y = y[n4*2:]
 #.......yerr..............
 errdat = np.loadtxt(f'./daterr/obsNEWerr.txt.{name}')
 erry = errdat[:]
-erry = erry[n4:]
+erry = erry[n4*2:]
 #..model.......................................................
 def Model_neatm_Ref_jhx(theta,x,lamda):
     '''
-    theta = (eta,D,wf)
+    theta = (eta,D)
     x = (astp,obsp)
     x = (3.4x;4.6x;12x;22x)
     '''
-    eta,D,wf = theta
+    eta,D = theta
     astp,obsp = x
     lamda1,lamda2,lamda3,lamda4 = lamda
     #print('k',astp)
@@ -79,12 +79,12 @@ def Model_neatm_Ref_jhx(theta,x,lamda):
     A = q*pv
     flux = np.zeros(n4*4)
     for i in range(n4):
-        fluxi,frLambi,frLommi = get_flux_ref(astp[i],obsp[i],D,lamda1,eta,A,Hv)
-        flux[i] = 1.3917*fluxi + 1.0049*(wf*frLambi + frLommi)
+        #fluxi,frLambi,frLommi = get_flux_ref(astp[i],obsp[i],D,lamda1,eta,A,Hv)
+        flux[i] = 0
         #print(f'{i}:ast{astp[i]} obs{obsp[i]} flux {flux[i]}')
     for i in range(n4,2*n4):
-        fluxi,frLambi,frLommi = get_flux_ref(astp[i],obsp[i],D,lamda2,eta,A,Hv)
-        flux[i] = 1.1124*fluxi + 1.0193*(wf*frLambi + frLommi)
+        #fluxi,frLambi,frLommi = get_flux_ref(astp[i],obsp[i],D,lamda2,eta,A,Hv)
+        flux[i] = 0
         #print(f'{i}:ast{astp[i]} obs{obsp[i]} flux {flux[i]}')
     for i in range(2*n4,n4*3):
         fluxi,frLambi,frLommi = get_flux_ref(astp[i],obsp[i],D,lamda3,eta,A,Hv)
@@ -94,26 +94,24 @@ def Model_neatm_Ref_jhx(theta,x,lamda):
         fluxi,frLambi,frLommi = get_flux_ref(astp[i],obsp[i],D,lamda4,eta,A,Hv)
         flux[i] = 0.9865*fluxi     
        # print(f'{i}:ast{astp[i]} obs{obsp[i]} flux {flux[i]}')
-    return flux[n4:]    
+    return flux[n4*2:]    
 #.....cal flux with ref
 #initial
 eta_gs = 1.2
 D_gs = 150
 eta_gss = [0,5]
 D_gss = [0,600]
-wf_gs = 0.2
-wf_gss = [0,0.5]
 #MCMC Function
 def log_likelihood(theta, x, y, yerr):
-    eta,D,wf = theta
+    eta,D = theta
     model = Model_neatm_Ref_jhx(theta,x,lamdai)
     #model = eta*x[0]*100 + D
     #sigma2 = yerr**2 + model**2 * np.exp(2 * logf)
     residuals_rv = y-model
     return -0.5*(np.sum((residuals_rv/yerr)**2 + np.log(2.0*np.pi*(yerr)**2)))
 def log_prior(theta):
-    eta,D,wf = theta
-    if eta_gss[0]< eta < eta_gss[1] and D_gss[0] < D < D_gss[1] and wf_gss[0] < wf < wf_gss[1] :
+    eta,D = theta
+    if eta_gss[0]< eta < eta_gss[1] and D_gss[0] < D < D_gss[1]  :
         return 0.0
     return -np.inf
     #return 0
@@ -132,20 +130,19 @@ xt = (xast,xear)
 #initial para guesses
 eta = eta_gs
 D = D_gs
-wf = wf_gs
-theta = [eta, D,wf]
+
+theta = [eta, D]
 #.........
 import emcee
 #initialize sampler
 ndim, nwalkers = len(theta), lenchan
-sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(xt, y, erry))
+sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(xt, y, y*0.1))
 pos = [theta + 1e-6*np.random.randn(ndim) for i in range(nwalkers)]
 #run mcmc
 sampler.run_mcmc(pos, lenstep, progress=True);
 frac = sampler.acceptance_fraction
 np.savetxt(f'./figmcmc/samples/frac.txt.{name}',frac)
 samples = sampler.get_chain()
-labels = ["eta", "D", "wf"]
 
 for i in range(ndim):
     np.savetxt(f'./figmcmc/samples/samples_{i}.txt.{name}',samples[:,:,i])
@@ -163,17 +160,16 @@ D_low,D_fit,D_high = np.percentile(flat_samples[:, 1], [16, 50, 84])
 pv = (1329*pow(10,-Hv/5)/(D_fit*0.001))**2
 eta_low,eta_fit,eta_high = np.percentile(flat_samples[:, 0], [16, 50, 84])
 D_low,D_fit,D_high = np.percentile(flat_samples[:, 1], [16, 50, 84])
-wf_low,wf_fit,wf_high = np.percentile(flat_samples[:, 2], [16, 50, 84])
-print(f'eta = {eta_fit} D ={D_fit} pv = {pv} wf ={wf_fit}')
+print(f'eta = {eta_fit} D ={D_fit} pv = {pv} ')
 fitans.append([0,pv,0])
-fitans.append([eta_fit,D_fit,wf_fit])
+fitans.append([eta_fit,D_fit,0])
 #plt.errorbar(y,y*0.1,fmt=".k", capsize=1.0)
-test = [eta_fit, D_fit, wf_fit]
+test=[eta_fit,D_fit]
 np.savetxt(f'./ansfit/fit.txt.{name}',fitans)
 def loss(obs,cal,err):
     l = len(obs)
     return sum(((obs-cal)/err)**2)/l
 print('err=1 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),1))
-print('err=y*0.01 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),y*0.01))
+print('err=y*0.01 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),y*0.05))
 print('err=erry : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),erry))
 

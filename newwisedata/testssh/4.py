@@ -2,6 +2,7 @@
 yerr = erry
 eta_gs = [0,10] 
 d_gs=[0,600]
+w234
 '''
 #import
 import numpy as np
