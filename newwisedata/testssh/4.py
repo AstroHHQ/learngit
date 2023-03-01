@@ -1,5 +1,5 @@
 '''
-yerr = erry
+yerr = 0.01*y
 eta_gs = [0,10] 
 d_gs=[0,600]
 w234
