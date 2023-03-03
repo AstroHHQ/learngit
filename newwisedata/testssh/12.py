@@ -1,5 +1,5 @@
 '''
-yerr = y*0.1
+yerr = y*0.01
 eta_gs = [0,3.1415]
 '''
 #import
@@ -134,7 +134,7 @@ theta = [eta, D,wf]
 import emcee
 #initialize sampler
 ndim, nwalkers = len(theta), lenchan
-sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(xt, y, y*0.1))
+sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, args=(xt, y, y*0.01))
 pos = [theta + 1e-6*np.random.randn(ndim) for i in range(nwalkers)]
 #run mcmc
 sampler.run_mcmc(pos, lenstep, progress=True);
@@ -170,7 +170,7 @@ def loss(obs,cal,err):
     l = len(obs)
     return sum(((obs-cal)/err)**2)/l
 print('err=1 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),1))
-print('err=y*0.1 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),y*0.1))
+print('err=y*0.01 : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),y*0.01))
 print('err=erry : LossFunction = ',loss(y,Model_neatm_Ref_jhx(test,xt,lamdai),erry))
 
 

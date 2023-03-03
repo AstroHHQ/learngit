@@ -1,6 +1,7 @@
 '''
 yerr = err
 eta_gs = [0,3.1415]
+D_gss = [0,500]
 '''
 #import
 import numpy as np
