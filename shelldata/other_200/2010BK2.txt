@@ -1,0 +1,1 @@
+[struct stat="ERROR", msg="ERROR: Cannot process Moving Object Correctly. ", logfile="https://irsa.ipac.caltech.edu:443/workspace/TMP_SSBzGH_8901/Gator/irsa/8901/log.8901.html"]

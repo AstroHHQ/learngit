@@ -1,0 +1,1 @@
+[struct stat="ERROR", msg="'/work/TMP_HIXnVS_30269/Gator/irsa/30269/most30269' missing column name headerline.", logfile="https://irsa.ipac.caltech.edu:443/workspace/TMP_HIXnVS_30269/Gator/irsa/30269/log.30269.html"]
