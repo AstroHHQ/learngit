@@ -1,0 +1,124 @@
+\                                                                               
+\fixlen = T
+\RowsRetrieved =                18
+\ORIGIN  = 'IPAC Infrared Science Archive (IRSA), Caltech/JPL'
+\SIMULATED_TABLE  = 'n'
+\DATETIME= '2023-03-03 11:01:35'
+\DataTag = 'ADS/IRSA.Gator#2023/0303/110135_13695'
+\DATABASE= 'WISE All-Sky Single Exposure (L1b) Source Table (allsky_4band_p1bs_psd)'
+\EQUINOX = 'J2000'
+\NOTE    = 'Column names with suffix _u are from the moving object seed list file .'
+\NOTE    = 'Column cntr_u is a sequential counter added to ID each row in the moving object seed list .'
+\NOTE    = 'dist is the distance in arcsec between each moving object source and its potential match in the WISE All-Sky Single Exposure (L1b) Source Table.'
+\NOTE    = 'pang is position angle, measured eastward from north, between the input source and potential match in the WISE All-Sky Single Exposure (L1b) Source Table. 
+\NOTE    = 'Output rows are ordered by increasing cntr_u, and for each cntr_u by increasing dist.'
+\StatusFile = '/workspace/TMP_vmH7Lc_13695/Gator/irsa/13695/log.13695.html'
+\SQL     = 'WHERE  (A.cntr_u = B.cntr_x) and (((B.x-A.x_u)*(B.x-A.x_u)+(B.y-A.y_u)*(B.y-A.y_u)+(B.z-A.z_u)*(B.z-A.z_u)) '
+\ Cont.  = '<= 5.87610763448673319e-10d) and A.scan_id_u=B.scan_id and A.frame_num_u=B.frame_num ' 
+\SQL     = 'SELECT (38 column names follow in next row.)'
+\ 
+\ cntr_u 
+\ ___ entry counter (key) number (unique within table)
+\ ra (deg) 
+\ ___ right ascension (J2000)
+\ dec (deg) 
+\ ___ declination (J2000)
+\ clon 
+\ ___ Right ascention in Sexagesimal format.
+\ clat 
+\ ___ Declination in Sexagesimal format.
+\ sigra (arcsec) 
+\ ___ uncertainty in RA
+\ sigdec (arcsec) 
+\ ___ uncertainty in DEC
+\ sigradec (arcsec) 
+\ ___ uncertainty cross-term
+\ w1mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 1
+\ w1sigmpro (mag) 
+\ ___ instrumental profile-fit photometry flux uncertainty in mag units, band 1
+\ w1snr 
+\ ___ instrumental profile-fit photometry S/N ratio, band 1
+\ w1rchi2 
+\ ___ instrumental profile-fit photometry reduced chi^2, band 1
+\ w2mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 2
+\ w2sigmpro (mag) 
+\ ___ instrumental profile-fit photometry flux uncertainty in mag units, band 2
+\ w2snr 
+\ ___ instrumental profile-fit photometry S/N ratio, band 2
+\ w2rchi2 
+\ ___ instrumental profile-fit photometry reduced chi^2, band 2
+\ w3mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 3
+\ w3sigmpro (mag) 
+\ ___ instrumental profile-fit photometry flux uncertainty in mag units, band 3
+\ w3snr 
+\ ___ instrumental profile-fit photometry S/N ratio, band 3
+\ w3rchi2 
+\ ___ instrumental profile-fit photometry reduced chi^2, band 3
+\ w4mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 4
+\ w4sigmpro (mag) 
+\ ___ instrumental profile-fit photometry flux uncertainty in mag units, band 4
+\ w4snr 
+\ ___ instrumental profile-fit photometry S/N ratio, band 4
+\ w4rchi2 
+\ ___ instrumental profile-fit photometry reduced chi^2, band 4
+\ nb 
+\ ___ number of blend components used in each fit
+\ na 
+\ ___ active deblend flag (=1 if actively deblended)
+\ w1sat 
+\ ___ fraction of pixels saturated, band 1
+\ w2sat 
+\ ___ fraction of pixels saturated, band 2
+\ w3sat 
+\ ___ fraction of pixels saturated, band 3
+\ w4sat 
+\ ___ fraction of pixels saturated, band 4
+\ cc_flags 
+\ ___ prioritized artifacts affecting the source in each band
+\ ph_qual 
+\ ___ photometric quality of each band (A=highest, U=upper limit)
+\ sso_flg 
+\ ___ known solar system object association flag (0=no association, >0=association)
+\ mjd (mjdate) 
+\ ___ modified Julian date of the mid-point of the observation of the frame
+\ tmass_key 
+\ ___ closest associated 2MASS All-Sky Release PSC key
+\ j_m_2mass (mag) 
+\ ___ J magnitude entry of the associated 2MASS All-Sky PSC source
+\ j_msig_2mass (mag) 
+\ ___ J photometric uncertainty of the associated 2MASS All-Sky PSC source
+\ h_m_2mass (mag) 
+\ ___ H magnitude entry of the associated 2MASS All-Sky PSC source
+\ h_msig_2mass (mag) 
+\ ___ H photometric uncertainty of the associated 2MASS All-Sky PSC source
+\ k_m_2mass (mag) 
+\ ___ Ks magnitude entry of the associated 2MASS All-Sky PSC source
+\ k_msig_2mass (mag) 
+\ ___ Ks photometric uncertainty of the associated 2MASS All-Sky PSC source
+\ 
+|       cntr_u|        dist_x|        pang_x|                ra_u|               dec_u|          ra|         dec|          clon|          clat|    sigra|   sigdec|  sigradec|  w1mpro| w1sigmpro|   w1snr|   w1rchi2|  w2mpro| w2sigmpro|   w2snr|   w2rchi2|  w3mpro| w3sigmpro|   w3snr|   w3rchi2|  w4mpro| w4sigmpro|   w4snr|   w4rchi2|   nb|   na|  w1sat|  w2sat|  w3sat|  w4sat| cc_flags| ph_qual|    sso_flg|          mjd|  tmass_key| j_m_2mass| j_msig_2mass| h_m_2mass| h_msig_2mass| k_m_2mass| k_msig_2mass|
+|         long|        double|        double|              double|              double|      double|      double|          char|          char|   double|   double|    double|  double|    double|  double|    double|  double|    double|  double|    double|  double|    double|  double|    double|  double|    double|  double|    double|  int|  int| double| double| double| double|     char|    char|        int|       double|        int|    double|       double|    double|       double|    double|       double|
+|             |        arcsec|           deg|                    |                    |         deg|         deg|              |              |   arcsec|   arcsec|    arcsec|     mag|       mag|        |          |     mag|       mag|        |          |     mag|       mag|        |          |     mag|       mag|        |          |     |     |       |       |       |       |         |        |           |       mjdate|           |       mag|          mag|       mag|          mag|       mag|          mag|
+|         null|          null|          null|                null|                null|        null|        null|          null|          null|     null|     null|      null|    null|      null|    null|      null|    null|      null|    null|      null|    null|      null|    null|      null|    null|      null|    null|      null| null| null|   null|   null|   null|   null|     null|    null|       null|         null|       null|      null|         null|      null|         null|      null|         null|
+             1       0.928006      38.940687     1.5446641500e+02     2.0435581000e+01  154.4665879   20.4357815   10h17m51.98s   20d26m08.81s    1.1831    1.3024     0.3712   17.092       null     null  1.047e+00   15.454      0.443      2.5  7.787e-01   10.234      0.186      5.8  1.258e+00    7.152       null      1.3  6.290e-01     1     0   0.000   0.000   0.000   0.000      0000     UCBU           0  55329.823000        null       null          null       null          null       null          null 
+             2       0.699375      72.103202     1.5455222700e+02     2.0445973000e+01  154.5524243   20.4460327   10h18m12.58s   20d26m45.72s    1.6013    1.7629     0.5002   17.030       null     null  6.599e-01   15.307      0.398      2.7  7.504e-01   10.603      0.280      3.9  1.211e+00    7.772       null     null  1.049e+00     2     0   0.000   0.000   0.000   0.000      0000     UCBU           0  55329.955304        null       null          null       null          null       null          null 
+             3       1.331973     -40.031450     1.5463808400e+02     2.0456220000e+01  154.6378300   20.4565033   10h18m33.08s   20d27m23.41s    1.4506    1.5719     0.4975   16.089       null      1.6  1.199e+00   14.817      0.298      3.6  4.098e-01   10.659      0.294      3.7  7.062e-01    7.747       null      0.2  7.969e-01     1     0   0.000   0.000   0.000   0.000      0000     UBBU           0  55330.087608        null       null          null       null          null       null          null 
+             4       4.425612     -31.489343     1.5472398500e+02     2.0466321000e+01  154.7232996   20.4673693   10h18m53.59s   20d28m02.53s    1.6970    1.9243     0.6004   16.281       null      1.6  7.322e-01   14.730       null      1.8  1.064e+00   10.736      0.311      3.5  9.224e-01    7.159       null      1.7  2.092e+00     1     0   0.000   0.000   0.000   0.000      0000     UUBU           0  55330.219912        null       null          null       null          null       null          null 
+             6       1.463569     -44.594314     1.5489591900e+02     2.0486087000e+01  154.8956143   20.4863765   10h19m34.95s   20d29m10.96s    1.0602    1.1807     0.3643   16.982       null     null  1.247e+00   15.232      0.393      2.8  9.419e-01   10.145      0.179      6.1  1.491e+00    7.425      0.351      3.1  7.557e-01     1     0   0.000   0.000   0.000   0.000      0000     UCBB           0  55330.484520        null       null          null       null          null       null          null 
+             9       1.009339     -52.982570     1.5502502400e+02     2.0500512000e+01  155.0247850   20.5006808   10h20m05.95s   20d30m02.45s    1.6084    1.8576     0.5219   16.692       null      0.9  7.824e-01   15.491       null      0.3  1.209e+00   10.428      0.226      4.8  8.157e-01    7.839       null      0.1  5.788e-01     1     0   0.000   0.000   0.000   0.000      0000     UUBU           0  55330.683039        null       null          null       null          null       null          null 
+            10       0.446318     134.566929     1.5506802600e+02     2.0505276000e+01  155.0681203   20.5051890   10h20m16.35s   20d30m18.68s    1.4819    1.6988     0.5490   16.965       null     null  8.914e-01   15.394       null      0.2  6.748e-01   10.453      0.229      4.7  5.374e-01    7.717      0.453      2.4  1.280e+00     1     0   0.000   0.000   0.000   0.000      0000     UUBC           0  55330.749128        null       null          null       null          null       null          null 
+            11       0.780689     145.631568     1.5506810900e+02     2.0505233000e+01  155.0682397   20.5050540   10h20m16.38s   20d30m18.19s    1.7574    2.0258     0.6110   16.713       null      1.0  1.086e+00   15.429       null      0.5  9.912e-01   10.551      0.248      4.4  9.241e-01    7.189       null      1.3  6.905e-01     1     0   0.000   0.000   0.000   0.000      0000     UUBU           0  55330.749255        null       null          null       null          null       null          null 
+            12       0.797760      15.920602     1.5511112100e+02     2.0509961000e+01  155.1111859   20.5101741   10h20m26.68s   20d30m36.63s    1.5010    1.6869     0.5780   16.952       null     null  5.042e-01   15.494       null      0.2  1.059e+00   10.377      0.220      4.9  1.241e+00    7.609       null      0.5  7.459e-01     2     0   0.000   0.000   0.000   0.000      0000     UUBU           0  55330.815343        null       null          null       null          null       null          null 
+            13       0.745776     -29.613779     1.5515414500e+02     2.0514653000e+01  155.1540357   20.5148331   10h20m36.97s   20d30m53.40s    1.3376    1.5241     0.5809   17.062       null     null  9.002e-01   15.228      0.379      2.9  9.701e-01   10.297      0.200      5.4  9.274e-01    7.574       null      0.6  9.329e-01     1     0   0.000   0.000   0.000   0.000      0000     UCBU           0  55330.881432        null       null          null       null          null       null          null 
+            14       0.307490     -38.763968     1.5515422700e+02     2.0514610000e+01  155.1541699   20.5146766   10h20m37.00s   20d30m52.84s    1.2130    1.3972     0.4549   16.590       null      1.2  9.697e-01   15.089      0.365      3.0  6.180e-01   10.244      0.190      5.7  6.771e-01    7.793       null      0.2  1.343e+00     1     0   0.000   0.000   0.000   0.000      0000     UCBU           0  55330.881559        null       null          null       null          null       null          null 
+            19       0.880065      78.485117     1.5536966800e+02     2.0537449000e+01  155.3699238   20.5374978   10h21m28.78s   20d32m14.99s    1.5202    1.6111     0.5008   16.441       null      0.9  9.962e-01   15.307      0.414      2.6  1.286e+00   10.621      0.284      3.8  1.696e+00    7.667      0.458      2.4  1.148e+00     1     0   0.000   0.000   0.000   0.000      0000     UCBC           0  55331.212255        null       null          null       null          null       null          null 
+            21       1.879178      43.266791     1.5554224300e+02     2.0555060000e+01  155.5426251   20.5554401   10h22m10.23s   20d33m19.58s    1.7413    1.9923     0.6929   16.481       null      1.5  1.085e+00   15.585       null     null  1.387e+00   10.523      0.249      4.4  7.777e-01    7.485       null      0.7  1.271e+00     2     0   0.000   0.000   0.000   0.000      0000     UUBU           0  55331.476863        null       null          null       null          null       null          null 
+            22       3.858597     -80.722130     1.5562859300e+02     2.0563654000e+01  155.6274632   20.5638268   10h22m30.59s   20d33m49.78s    1.4581    1.6439     0.5301   17.022       null      0.1  9.521e-01   15.652       null     null  9.997e-01   10.363      0.218      5.0  1.045e+00    7.420      0.481      2.3  1.059e+00     2     0   0.000   0.000   0.000   0.000      0000     UUBC           0  55331.609167        null       null          null       null          null       null          null 
+            23       4.420696      21.894411     1.5571498400e+02     2.0572104000e+01  155.7154731   20.5732434   10h22m51.71s   20d34m23.68s    1.3320    1.5243     0.5801   17.065       null     null  3.730e-01   14.468      0.271      4.0  1.074e+00   10.720      0.297      3.7  1.320e+00    7.651       null     null  9.841e-01     1     0   0.000   0.000   0.000   0.000      0000     UBBU           0  55331.741471        null       null          null       null          null       null          null 
+            25       2.576734      20.711900     1.5580150000e+02     2.0580370000e+01  155.8017704   20.5810395   10h23m12.42s   20d34m51.74s    1.7619    2.0514     0.6949   16.988       null     null  4.589e-01   14.979       null      1.8  1.197e+00   10.628      0.267      4.1  1.201e+00    7.762       null     null  1.047e+00     1     0   0.000   0.000   0.000   0.000      0000     UUBU           0  55331.873903        null       null          null       null          null       null          null 
+            26       2.568793     -15.258316     1.5588788900e+02     2.0588582000e+01  155.8876884   20.5892704   10h23m33.05s   20d35m21.37s    1.3473    1.5299     0.3913   16.875       null      0.3  7.827e-01   15.400       null      0.5  1.587e+00   10.285      0.194      5.6  9.565e-01    7.801      0.501      2.2  1.038e+00     1     0   0.000   0.000   0.000   0.000      0000     UUBC           0  55332.006079        null       null          null       null          null       null          null 
+            27       0.777633    -166.797754     1.5588797300e+02     2.0588538000e+01  155.8879203   20.5883277   10h23m33.10s   20d35m17.98s    1.3563    1.5027     0.4480   16.373       null      1.5  1.257e+00   15.658      0.519      2.1  8.262e-01   10.355      0.204      5.3  8.155e-01    7.434       null      0.7  5.875e-01     1     0   0.000   0.000   0.000   0.000      0000     UCBU           0  55332.006207        null       null          null       null          null       null          null 
