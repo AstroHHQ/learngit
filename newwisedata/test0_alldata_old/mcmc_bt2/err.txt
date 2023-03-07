@@ -1,0 +1,2 @@
+datafill = data1234.fillna(method='ffill').fillna(method='bfill')
+err fillna
